@@ -6,7 +6,9 @@
     align-items: center;
     padding: 100px 0;
 }
-
+.product__section {
+    height: 100vh;
+}
 .item {
     width: 250px;
     height: 350px;

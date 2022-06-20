@@ -1,8 +1,10 @@
 import React from 'react'
 import "./products.css"
+import { Link } from 'react-router-dom'
+
 
 const Products = (props) => {
-  const { state, spin,  } = props
+  const { state, spin, inForClick } = props
   console.log(state)
   return (
     <>
@@ -19,7 +21,7 @@ const Products = (props) => {
                       <div>
                         <img width={200} height={200} src={element.strMealThumb} alt="" />
                       </div>
-                      <p>{element.strMeal}</p>
+                      <Link to="/information" className='link'><p onClick={() => inForClick(element.idMeal)}>{element.strMeal}</p></Link>
                       {/* <button className='btn' onClick={() => addToCart(element.idMeal)}>Дабавить карзинку</button> */}
                     </div>
                   </>

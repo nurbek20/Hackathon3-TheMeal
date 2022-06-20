@@ -13,7 +13,6 @@ const Header = ({
     setSearch,
     search,
  }) => {
-    const keyPress = (e) => e.key == 'Enter' ? btnClick() : '';
 
     const btnClick = () => {
         axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
@@ -37,7 +36,7 @@ const Header = ({
                             <h2><Link className='link' to="/">Home</Link></h2>
                             <h2><Link className='link'to="/cart">Корзина{lenght}</Link> </h2>
                             <div className='navbar__input'>
-                                <input className='inp'  onChange={(e) => setSearch(e.target.value)} onKeyPress={(e) => keyPress(e)} type="text" placeholder='Search' />
+                                <input className='inp'  onChange={(e) => setSearch(e.target.value)} type="text" placeholder='Search' />
                                 <Link to="/products">  <button className='inp1' onClick={()=>btnClick()} type="submit" value="Search">Search</button></Link>
                                 {
                                     user ?

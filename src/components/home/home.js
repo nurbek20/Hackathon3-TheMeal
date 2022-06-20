@@ -146,7 +146,7 @@ const Home = (props) => {
                       <div>
                         <img key={id} width={250} height={200} src={item.strMealThumb} alt="" />
                       </div>
-                      <p className='section__card__text'>{item.strMeal}</p>
+                     <Link to="/information" className='link'> <p className='section__card__text'  onClick={()=>inForClick(item.idMeal)}>{item.strMeal}</p></Link>
                     </div>
                   </>
                 )

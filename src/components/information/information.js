@@ -18,7 +18,7 @@ const Information = (props) => {
                                             <div>
                                                 <h2>{element.strMeal}</h2>
                                                 <div className='box__card'>
-                                                    <img width={350} height={350} src={element.strMealThumb} alt="" />
+                                                    <img width={350} height={400} src={element.strMealThumb} alt="" />
                                                 </div>
 
                                             </div>
