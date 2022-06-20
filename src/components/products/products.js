@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Products = (props) => {
   const { state, spin, inForClick, addToCart } = props
-  console.log(state)
+  // console.log(state)
   return (
     <>
       <section>
@@ -31,26 +31,6 @@ const Products = (props) => {
           </div>
         </div>
       </section>
-      {/* <section>
-        <div className='container'>
-          <div className='products'>
-            {
-              product.map((item, id) => {
-                return (
-                  <>
-                    <div className='section'>
-                      <div>
-                        <img key={id} width={200} height={200} src={item.strMealThumb} alt="" />
-                      </div>
-                      <p key={id}>{item.strMeal}</p>
-                    </div>
-                  </>
-                )
-              })
-            }
-          </div>
-        </div>
-      </section> */}
     </>
   )
 }

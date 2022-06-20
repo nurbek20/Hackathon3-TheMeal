@@ -11,7 +11,7 @@ const Home = (props) => {
   useEffect(() => {
     axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?f=${a[Math.floor(a.length * Math.random())]}`)
       .then((res => {
-        console.log("random meealls>>", res)
+        // console.log("random meealls>>", res)
         setRandom(res.data.meals)
       }))
   }, [])
@@ -19,7 +19,7 @@ const Home = (props) => {
   useEffect(() => {
     axios.get('https://www.themealdb.com/api/json/v1/1/categories.php')
       .then((res => {
-        console.log(res.data.categories);
+        // console.log(res.data.categories);
         setData(res.data.categories);
       }))
   }, [])
@@ -29,7 +29,7 @@ const Home = (props) => {
     axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood`)
       .then((res => {
         setVal(res.data.meals)
-        console.log("random meals>>", res)
+        // console.log("random meals>>", res)
       }))
   }, [])
 
@@ -37,7 +37,7 @@ const Home = (props) => {
     axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${element}`)
       .then((res => {
         setProductitem(res.data.meals)
-        console.log("products>>", res)
+        // console.log("products>>", res)
       }))
   }
 
@@ -68,7 +68,7 @@ const Home = (props) => {
         </div>
       </main>
 
-      <section id="section">
+      {/* <section id="section">
         <div className='container'>
           <div className='section__border'>
             <div className='section__meals'>
@@ -79,7 +79,8 @@ const Home = (props) => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
       <section id='section__card'>
         <div className='container'>
           <h2 className='text'>Category Ingredients</h2>
@@ -105,8 +106,6 @@ const Home = (props) => {
         </div>
       </section>
 
-
-
       <section>
         <div className='container'>
           <h2 className='text'>Latest Meals</h2>
@@ -131,6 +130,7 @@ const Home = (props) => {
           </div>
         </div>
       </section>
+            
       <section>
         <div className='container'>
           <h2 className='text'>Random Meals</h2>

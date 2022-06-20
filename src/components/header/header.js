@@ -18,7 +18,7 @@ const Header = ({
         axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
             .then((res => {
                 setState(res.data.meals)
-                console.log("data", res)
+                // console.log("data", res)
             }))
     }
 

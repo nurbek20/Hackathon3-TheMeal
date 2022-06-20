@@ -33,9 +33,10 @@ const App = () => {
   useEffect(() => {
     getMe()
   }, [])
+
   const getMe = async () => {
     await services.getMe().then(res => {
-      console.log('get me ', res)
+      // console.log('get me ', res)
       setUser(res.data.firstName)
     })
   }
@@ -44,7 +45,7 @@ const App = () => {
     Cookies.remove('token')
   }
 
-  console.log("user>>", user)
+  // console.log("user>>", user)
 
   const deleteItem = (element) => {
     const check = [...cart.filter((index) => index.idMeal !== element)]
@@ -59,7 +60,7 @@ const App = () => {
 
 
   const addToCart = (element) => {
-    console.log("cart >>>", element)
+    // console.log("cart >>>", element)
     const check = state.find(elem => elem.idMeal === element)
     if (check) {
       alert("Товар добавлено")
@@ -72,10 +73,10 @@ const App = () => {
 
  
   const inForClick = (item) => {
-    console.log("inForClick>>>  ", item)
+    // console.log("inForClick>>>  ", item)
     axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${item}`)
       .then((number => {
-        console.log("number>>>", number)
+        // console.log("number>>>", number)
         setInfor(number.data.meals)
       }))
   }
