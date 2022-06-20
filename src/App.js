@@ -28,7 +28,7 @@ const App = () => {
   const [infor, setInfor] = useState([])
 
 
- 
+
 
   useEffect(() => {
     getMe()
@@ -70,7 +70,7 @@ const App = () => {
     setCart(newArr)
   }
 
-
+ 
   const inForClick = (item) => {
     console.log("inForClick>>>  ", item)
     axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${item}`)
@@ -95,6 +95,7 @@ const App = () => {
         <Route path="/" element={<Home
           addToCart={addToCart}
           setProduct={setProduct}
+          setProductitem={setProductitem}
           data={data}
           setData={setData}
           val={val}
