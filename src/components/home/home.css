@@ -1,0 +1,135 @@
+/* ? main  */
+#main {
+    background-color: rgb(26, 17, 17);
+    padding: 30px 0;
+}
+
+.main__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.main__text {
+    width: 600px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+/* * section  */
+#section {
+    background-color: rgb(39, 29, 29);
+    padding: 50px 0;
+}
+
+.section__border {
+    border-top: 4px solid #fff;
+    padding: 30px 0;
+    border-bottom: 4px solid #fff;
+
+}
+
+.section__meals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__meals,
+input {
+    padding: 5px 0px;
+    font-size: 25px;
+    border-radius: 7px 0 0 7px;
+}
+
+.section__meals,
+button {
+    padding: 7px 0px;
+    font-size: 25px;
+    border-radius: 0 7px 7px 0;
+    border: none;
+}
+
+/* * setctiom meals card  */
+.random__card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 2px solid #fff;
+    padding: 30px 0;
+}
+.random__mealCard {
+    width: 300px;
+    height: 350px;
+    padding: 10px;
+    text-align: center;
+    /* border:3px solid aqua; */
+    background-color: #4e4a4a4d;
+    border-radius: 10px;
+    color:#fff;
+}
+
+/* ? section card */
+#section__card {
+    padding: 60px 0;
+}
+
+.section__card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 0;
+    border-bottom: 2px solid #fff;
+    color:#fff;
+}
+
+.section__meal__card {
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    text-align: center;
+    /* border:3px solid aqua; */
+    background-color: #4e4a4a4d;
+    border-radius: 10px;
+}
+.section__card__text {
+    margin: 10px 0;
+}
+.card__text {
+    text-decoration: none;
+    color:#fff;
+}
+
+.card__text:active{
+    color: aqua;
+}
+.btn{
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #4e4a4a4d;
+    color:#fff;
+}
+.btn:hover{
+    background-color: aqua;
+    color:black;
+}
+.btn:active{
+    background-color: #3a363686;
+    color:#fff;
+}
+
+.link {
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+    transition: .2s;
+  }

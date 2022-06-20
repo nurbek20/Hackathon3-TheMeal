@@ -1,0 +1,38 @@
+.form__content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(10, 6, 6, 0.5);
+}
+.form{
+    width: 450px;
+    height: 450px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: rgba(10, 6, 6, 0.4);
+}
+span {
+    color: aqua;
+}
+.input {
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+.btnlogin {
+    padding: 6px 15px;
+    text-align: center;
+    border-radius: 10px;
+}
+.register {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .btn1 {
+    padding: 10px 30px;
+    margin: 0 10px;
+} */
