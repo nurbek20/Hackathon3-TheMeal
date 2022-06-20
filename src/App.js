@@ -127,6 +127,7 @@ const App = () => {
         />} />
         <Route path="/information" element={<Information
         infor={infor}
+        spin={spin}
         />} />
       </Routes>
       {/* {user} */}

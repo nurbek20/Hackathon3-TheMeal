@@ -2,13 +2,15 @@ import React from 'react'
 import './information.css'
 
 const Information = (props) => {
-    const { infor } = props
+    const { infor, spin } = props
     return (
         <>
             <div className='section__info'>
                 <div className='container'>
                     <div className='information__card'>
-                        {
+                        {spin === true ?
+                            <div className="loader"></div>
+                            :
                             infor.map((element, index) => {
                                 return (
                                     <>
