@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios'
 
 const Home = (props) => {
-  const { setProductitem, addToCart, data, setData, val, setVal, spin, inForClick } = props
+  const { setProductitem,  data, setData, val, setVal, spin, inForClick } = props
   const [random, setRandom] = useState([])
   let a = ['a', 'b', 'c', 'd', 'e', 'f'];
   useEffect(() => {
@@ -123,7 +123,6 @@ const Home = (props) => {
                           <img width={250} height={250} src={element.strMealThumb} alt="" />
                         </div>
                         <p className='section__card__text' onClick={()=>inForClick(element.idMeal)}>{element.strMeal}</p></Link>
-                      <button className='btn' onClick={() => addToCart(element.idMeal)}>Дабавить Карзинку</button>
                     </div>
                   </>
                 )

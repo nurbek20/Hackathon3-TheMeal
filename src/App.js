@@ -22,22 +22,13 @@ const App = () => {
   const [product, setProduct] = useState([])
   const [productitem, setProductitem] = useState([])
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || [])
-  const [productcart, setProductcart] = useState(JSON.parse(localStorage.getItem('cart')) || [])
   const lenght = cart.length
   const [spin, setSpin] = useState(false)
   const [user, setUser] = useState('')
   const [infor, setInfor] = useState([])
 
 
-  // const keyPress = (e) => e.key == 'Enter' ? btnClick() : '';
-
-  // const btnClick = () => {
-  //   axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
-  //     .then((res => {
-  //       setState(res.data.meals)
-  //       console.log("data", res)
-  //     }))
-  // }
+ 
 
   useEffect(() => {
     getMe()
@@ -65,31 +56,20 @@ const App = () => {
     ])
 
   }
-  const deleteProduct = (element) => {
-    setProductcart([
-      ...productcart.filter((index) => index.idMeal !== element)
-    ])
-  }
+
 
   const addToCart = (element) => {
     console.log("cart >>>", element)
-    const check = val.find(elem => elem.idMeal === element)
+    const check = state.find(elem => elem.idMeal === element)
     if (check) {
       alert("Товар добавлено")
     }
-    const elem = val.find(elem => elem.idMeal === element)
+    const elem = state.find(elem => elem.idMeal === element)
     const newArr = [...cart, elem]
     localStorage.setItem('cart', JSON.stringify(newArr))
     setCart(newArr)
   }
 
-  const adddToCart = (item) => {
-    console.log("ADDTOcart>>", item)
-    const elem = productitem.find(elem => elem.idMeal === item)
-    const newArr = [...productcart, elem]
-    localStorage.setItem('cart', JSON.stringify(newArr))
-    setProductcart(newArr)
-  }
 
   const inForClick = (item) => {
     console.log("inForClick>>>  ", item)
@@ -115,7 +95,6 @@ const App = () => {
         <Route path="/" element={<Home
           addToCart={addToCart}
           setProduct={setProduct}
-          setProductitem={setProductitem}
           data={data}
           setData={setData}
           val={val}
@@ -135,16 +114,13 @@ const App = () => {
         <Route path="/products__item" element={<ProductsItem
           inForClick={inForClick}
           productitem={productitem}
-          adddToCart={adddToCart}
           spin={spin}
         />} />
         <Route path="/cart" element={<Cart
           inForClick={inForClick}
           cart={cart}
-          productcart={productcart}
           deleteItem={deleteItem}
           spin={spin}
-          deleteProduct={deleteProduct}
         />} />
         <Route path="/information" element={<Information
           infor={infor}

@@ -3,7 +3,7 @@ import "./products-item.css"
 import {Link} from 'react-router-dom'
 
 const ProductsItem = (props) => {
-    const { productitem, spin, adddToCart, inForClick } = props
+    const { productitem, spin,  inForClick } = props
 
     return (
         <>
@@ -23,8 +23,6 @@ const ProductsItem = (props) => {
                                             <Link className='link' to="/information">
                                                 <p onClick={() => inForClick(item.idMeal)} key={i}>{item.strMeal}</p>
                                             </Link>
-
-                                            <button className='btn' onClick={() => adddToCart(item.idMeal)}>Дабавить карзинку</button>
                                         </div>
                                     </>
                                 )

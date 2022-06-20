@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 
 const Products = (props) => {
-  const { state, spin, inForClick } = props
+  const { state, spin, inForClick, addToCart } = props
   console.log(state)
   return (
     <>
@@ -22,7 +22,7 @@ const Products = (props) => {
                         <img width={200} height={200} src={element.strMealThumb} alt="" />
                       </div>
                       <Link to="/information" className='link'><p onClick={() => inForClick(element.idMeal)}>{element.strMeal}</p></Link>
-                      {/* <button className='btn' onClick={() => addToCart(element.idMeal)}>Дабавить карзинку</button> */}
+                      <button className='btn' onClick={() => addToCart(element.idMeal)}>Дабавить карзинку</button>
                     </div>
                   </>
                 )
